@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hydra-bg: #E8F3F8;
+  --color-hydra-green: #58A646;
+  --color-hydra-greenDark: #478c37;
+  --color-hydra-forest: #154726;
+  --color-hydra-forestLight: #1e5c33;
+  --color-hydra-blue: #3FA9D6;
+  --color-hydra-gold: #D4A843;
+  --color-hydra-goldDark: #C89D3C;
+  --color-hydra-tealText: #2C5E4F;
+  --color-hydra-borderLight: #8AB8C9;
+  --color-hydra-peach: #F4A261;
+
+  --font-serif: var(--font-after), 'After', Georgia, serif;
+  --font-sans: var(--font-poppins), 'Poppins', system-ui, sans-serif;
+  --font-display: var(--font-after), 'After', sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-hydra-bg, #E8F3F8);
+    font-family: var(--font-sans);
+    color: var(--color-hydra-tealText, #2C5E4F);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  .serif-heading,
+  .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+
+/* Custom subtle scrollbars for carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Soil & Hydrogel Hero Effect */
+.hero-soil-bg {
+  background-image:
+    linear-gradient(to right, rgba(20, 12, 8, 0.84) 0%, rgba(28, 17, 10, 0.65) 45%, rgba(20, 12, 8, 0.28) 100%),
+    url('https://images.unsplash.com/photo-1592419044706-39796d40f98c?auto=format&fit=crop&w=1800&q=85');
+  background-size: cover;
+  background-position: center 65%;
+}
+
+/* Section thin lines matching the mockup */
+.title-divider {
+  border-top: 1px solid rgba(44, 94, 79, 0.22);
+  border-bottom: 1px solid rgba(44, 94, 79, 0.22);
+}
+
+/* Cards */
+.hydra-card {
+  transition: border-color 0.2s ease;
+}
